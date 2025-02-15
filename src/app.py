@@ -27,7 +27,7 @@ def main():
         crp = st.number_input("C-reactive protein (mg/L) [0-100]:",
                             min_value=0.0, max_value=100.0,
                             value=1.0, step=0.1)
-
+        st.caption("MCV: Mean Corpuscular Volume")
     with col2:
         lymphocyte = st.number_input("Lymphocyte percentage (%) [0-99]:",
                                    min_value=0.0, max_value=99.0,
@@ -50,7 +50,7 @@ def main():
                                   value=10.0, step=0.1)
 
         # 底部单位说明
-        st.caption("MCV: Mean Corpuscular Volume | RDW: Red Cell Distribution Width | Alk Phos: Alkaline Phosphatase")
+        st.caption("RDW: Red Cell Distribution Width | Alk Phos: Alkaline Phosphatase")
 
         biomarkers = {
             "Albumin1": albumin,
