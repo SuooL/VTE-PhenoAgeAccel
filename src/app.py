@@ -67,7 +67,7 @@ def main():
 
     if st.button("Calculate"):
         phenotypic_age = calculate_phenotypic_age(biomarkers)
-        age_acceleration = calculate_age_acceleration(phenotypic_age, age)
+        age_acceleration = calculate_age_acceleration(age, phenotypic_age)
 
         st.success(f"Your Phenotypic Age is: {phenotypic_age:.2f} years")
         st.success(f"Your Age Acceleration is: {age_acceleration:.2f} years")
