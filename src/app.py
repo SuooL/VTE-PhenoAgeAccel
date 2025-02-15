@@ -3,9 +3,8 @@ import streamlit as st
 from utils.calculations import calculate_phenotypic_age, calculate_age_acceleration
 
 def main():
-    st.title("Phenotypic Age and Age Acceleration Calculator")
+    st.title("Phenotypic Age and Age Acceleration Calculator of VTE")
 
-    st.header("Input Parameters")
     age = st.number_input("Enter your chronological age:", min_value=0, max_value=120, value=30)
 
     albumin = st.number_input("Enter your Albumin level:", min_value=0.0, max_value=10.0, value=4.0)
@@ -17,6 +16,7 @@ def main():
     rbc_width = st.number_input("Enter your RBC Width:", min_value=0.0, max_value=10.0, value=5.0)
     alkaline = st.number_input("Enter your Alkaline level:", min_value=0.0, max_value=10.0, value=5.0)
     wbc_count = st.number_input("Enter your WBC Count:", min_value=0, max_value=10000, value=5000)
+
 
     biomarkers = {
         "Albumin1": albumin,
