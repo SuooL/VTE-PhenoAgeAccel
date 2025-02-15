@@ -68,7 +68,7 @@ def main():
     # 添加引用（在按钮代码块之后）
     st.markdown("---")
     st.markdown("""
-    **Scientific Reference:**
+    **Citation Reference:**
     Hu, Z., Xu, J., Shen, R., et al. Combination of Biological Aging and Genetic Susceptibility Helps Identifying
     At-Risk Population of Venous Thromboembolism: A Prospective Cohort Study of 394,041 Participants.
     *Am J Hematol.* 2025. [doi:10.1002/ajh.27605](https://doi.org/10.1002/ajh.27605)
