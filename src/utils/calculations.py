@@ -13,14 +13,10 @@ def calculate_phenotypic_age(biomarkers):
     return pheno_age1
 
 
-# 依据现有的年龄和表型年龄拟合lm模型，计算年龄加速度
-
-
 def calculate_age_acceleration(chronological_age, phenotypic_age):
 
-    # 假定拟合出的模型为：lm_phenotypic_age = a * chronological_age + b
-    # 则年龄加速度 = phenotypic_age - (a * chronological_age + b)
-    # 这里假设 a = 1, b = 0.00125
-    lm_phenotypic_age = 1 * chronological_age + 0.00125
+    # Intercept: -4.704405105637077
+    # Age Coefficient: 1.0172367161295937
+    lm_phenotypic_age = -4.704405105637077 + 1.0172367161295937 * chronological_age
 
     return phenotypic_age - lm_phenotypic_age
