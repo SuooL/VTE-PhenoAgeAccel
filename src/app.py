@@ -69,9 +69,10 @@ def main():
     st.markdown("---")
     st.markdown("""
     **Citation Reference:**
-    Hu, Z., Xu, J., Shen, R., et al. Combination of Biological Aging and Genetic Susceptibility Helps Identifying
-    At-Risk Population of Venous Thromboembolism: A Prospective Cohort Study of 394,041 Participants.
-    *Am J Hematol.* 2025. [doi:10.1002/ajh.27605](https://doi.org/10.1002/ajh.27605)
+    Hu, Z., Xu, J., Shen, R., Lin, L., Su, Y., Xie, C., You, G., Zhou, Y. and Huang, K. (2025),
+    Combination of Biological Aging and Genetic Susceptibility Helps Identifying At-Risk Population of Venous Thromboembolism:
+    A Prospective Cohort Study of 394,041 Participants. *American Journal of Hematology*.
+    doi: [10.1002/ajh.27605](https://doi.org/10.1002/ajh.27605)
     """)
 if __name__ == "__main__":
     main()
