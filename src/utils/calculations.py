@@ -1,4 +1,4 @@
-from math import log, exp, abs
+from math import log, exp
 
 def calculate_phenotypic_age(biomarkers):
     # calculate xb1
