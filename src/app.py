@@ -1,4 +1,5 @@
-from streamlit import st
+import streamlit as st
+
 from utils.calculations import calculate_phenotypic_age, calculate_age_acceleration
 
 '''
