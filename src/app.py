@@ -14,40 +14,40 @@ def main():
 
         albumin = st.number_input("Albumin (g/L) [10-60]:",
                                 min_value=10.0, max_value=60.0,
-                                value=42.38, step=0.000001)
+                                value=42.38, step=0.1, format="%0.5f")
 
         creatinine = st.number_input("Creatinine (μmol/L) [0-2000]:",
                                    min_value=0.0, max_value=2000.0,
-                                   value=57.9, step=0.000001)
+                                   value=57.9, step=1.0, format="%0.5f")
 
         glucose = st.number_input("Glucose (mmol/L) [0-40]:",
                                 min_value=0.0, max_value=40.0,
-                                value=5.17, step=0.1)
+                                value=5.17, step=0.1, format="%0.5f")
 
         crp = st.number_input("C-reactive protein (mg/L) [0-100]:",
                             min_value=0.0, max_value=100.0,
-                            value=1.36, step=0.000001)
+                            value=1.36, step=0.1, format="%0.5f")
 
     with col2:
         lymphocyte = st.number_input("Lymphocyte percentage (%) [0-99]:",
                                    min_value=0.0, max_value=99.0,
-                                   value=24.28, step=0.000001)
+                                   value=24.28, step=0.1, format="%0.5f")
 
         rbc_volume = st.number_input("MCV (fL) [0-200]:",
                                    min_value=0.0, max_value=200.0,
-                                   value=92.64, step=0.000001)
+                                   value=92.64, step=0.1, format="%0.5f")
 
         rbc_width = st.number_input("RDW (%) [0-50]:",
                                   min_value=0.0, max_value=50.0,
-                                  value=13.46, step=0.000001)
+                                  value=13.46, step=0.1, format="%0.5f")
 
         alkaline = st.number_input("Alkaline phosphatase (U/L) [0-2000]:",
                                  min_value=0.0, max_value=2000.0,
-                                 value=106.4, step=0.000001)
+                                 value=106.4, step=1.0, format="%0.5f")
 
         wbc_count = st.number_input("WBC count (10⁹ cells/L) [0-400]:",
                                   min_value=0.0, max_value=400.0,
-                                  value=7.66, step=0.000001)
+                                  value=7.66, step=0.1, format="%0.5f")
 
         # 底部单位说明
         st.caption("MCV: Mean Corpuscular Volume | RDW: Red Cell Distribution Width | Alk Phos: Alkaline Phosphatase")
