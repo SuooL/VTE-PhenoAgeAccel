@@ -8,38 +8,46 @@ def main():
 
     # 创建两列布局（比例可调）
     col1, col2 = st.columns([1, 1])  # 等宽两列
-
     with col1:
         age = st.number_input("Chronological age (years):",
-                            min_value=0, max_value=120, value=50)
+                            min_value=0, max_value=100, value=50)
 
-        albumin = st.number_input("Albumin (g/dL) [0.1-10.0]:",
-                                min_value=0.1, max_value=10.0, value=4.0, step=0.1)
+        albumin = st.number_input("Albumin (g/L) [10-60]:",
+                                min_value=10.0, max_value=60.0,
+                                value=40.0, step=0.1)
 
-        creatinine = st.number_input("Creatinine (mg/dL) [0.1-15.0]:",
-                                min_value=0.1, max_value=15.0, value=1.0, step=0.1)
+        creatinine = st.number_input("Creatinine (μmol/L) [0-2000]:",
+                                   min_value=0.0, max_value=2000.0,
+                                   value=88.4, step=1.0)
 
-        glucose = st.number_input("Glucose (mg/dL) [20-1000]:",
-                                min_value=20.0, max_value=1000.0, value=100.0, step=1.0)
+        glucose = st.number_input("Glucose (mmol/L) [0-40]:",
+                                min_value=0.0, max_value=40.0,
+                                value=5.5, step=0.1)
 
-        crp = st.number_input("CRP (mg/L) [0.1-500]:",
-                            min_value=0.1, max_value=500.0, value=1.0, step=0.1)
+        crp = st.number_input("C-reactive protein (mg/L) [0-100]:",
+                            min_value=0.0, max_value=100.0,
+                            value=1.0, step=0.1)
 
     with col2:
-        lymphocyte = st.number_input("Lymphocyte (cells/μL) [0-50k]:",
-                                min_value=0, max_value=50000, value=1500)
+        lymphocyte = st.number_input("Lymphocyte percentage (%) [0-99]:",
+                                   min_value=0.0, max_value=99.0,
+                                   value=20.0, step=0.1)
 
-        rbc_volume = st.number_input("MCV (fL) [50-150]:",
-                                min_value=50.0, max_value=150.0, value=90.0, step=0.1)
+        rbc_volume = st.number_input("MCV (fL) [0-200]:",
+                                   min_value=0.0, max_value=200.0,
+                                   value=90.0, step=0.1)
 
-        rbc_width = st.number_input("RDW (%) [5-30]:",
-                                min_value=5.0, max_value=30.0, value=13.0, step=0.1)
+        rbc_width = st.number_input("RDW (%) [0-50]:",
+                                  min_value=0.0, max_value=50.0,
+                                  value=13.0, step=0.1)
 
-        alkaline = st.number_input("Alk Phos (U/L) [10-2000]:",
-                                min_value=10.0, max_value=2000.0, value=100.0, step=1.0)
+        alkaline = st.number_input("Alkaline phosphatase (U/L) [0-2000]:",
+                                 min_value=0.0, max_value=2000.0,
+                                 value=100.0, step=1.0)
 
-        wbc_count = st.number_input("WBC (cells/μL) [1k-100k]:",
-                                min_value=1000, max_value=100000, value=7000)
+        wbc_count = st.number_input("WBC count (10⁹ cells/L) [0-400]:",
+                                  min_value=0.0, max_value=400.0,
+                                  value=10.0, step=0.1)
 
         # 底部单位说明
         st.caption("MCV: Mean Corpuscular Volume | RDW: Red Cell Distribution Width | Alk Phos: Alkaline Phosphatase")
