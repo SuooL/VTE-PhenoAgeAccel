@@ -2,15 +2,6 @@ import streamlit as st
 
 from utils.calculations import calculate_phenotypic_age, calculate_age_acceleration
 
-'''
-
-data$xb1 <- -19.907-0.0336 * data$Albumin1 + 0.0095 *data$Creatinine1 + 0.1953 * data$Glucose1 + 0.0954*log(data$CRP1) - 0.012*data$Lymphocyte1 + 0.0268*data$RBCVOLUME1 + 0.3306*data$RBCWIDTH1 +0.00188 * data$Alkaline1 + 0.0554*data$WBCCOUNT1 + 0.0804*data$Age.at.recruitment
-
-data$mortality_risk1 <- 1 - exp((-1.51714 * exp(data$xb1)) / 0.0076927)
-data$pheno_age1<- log(-0.00553*log(1-data$mortality_risk1))/0.090165+141.50225
-
-'''
-
 def main():
     st.title("Phenotypic Age and Age Acceleration Calculator")
 
