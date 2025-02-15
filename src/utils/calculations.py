@@ -1,5 +1,4 @@
-from math import log, exp
-
+from math import log, exp, abs
 
 def calculate_phenotypic_age(biomarkers):
     # calculate xb1
@@ -9,7 +8,7 @@ def calculate_phenotypic_age(biomarkers):
     mortality_risk1 = 1 - exp((-1.51714 * exp(xb1)) / 0.0076927)
 
     # calculate pheno_age1
-    pheno_age1 = log(-0.00553 * log(1 - mortality_risk1)) / 0.090165 + 141.50225
+    pheno_age1 = log(abs(-0.00553 * log(1 - mortality_risk1))) / 0.090165 + 141.50225
 
     return pheno_age1
 
