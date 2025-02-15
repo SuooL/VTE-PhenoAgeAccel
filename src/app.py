@@ -14,11 +14,11 @@ def main():
 
         albumin = st.number_input("Albumin (g/L) [10-60]:",
                                 min_value=10.0, max_value=60.0,
-                                value=42.38, step=0.1)
+                                value=42.38, step=0.000001)
 
         creatinine = st.number_input("Creatinine (μmol/L) [0-2000]:",
                                    min_value=0.0, max_value=2000.0,
-                                   value=57.9, step=1.0)
+                                   value=57.9, step=0.000001)
 
         glucose = st.number_input("Glucose (mmol/L) [0-40]:",
                                 min_value=0.0, max_value=40.0,
@@ -26,28 +26,28 @@ def main():
 
         crp = st.number_input("C-reactive protein (mg/L) [0-100]:",
                             min_value=0.0, max_value=100.0,
-                            value=1.36, step=0.1)
+                            value=1.36, step=0.000001)
 
     with col2:
         lymphocyte = st.number_input("Lymphocyte percentage (%) [0-99]:",
                                    min_value=0.0, max_value=99.0,
-                                   value=24.28, step=0.1)
+                                   value=24.28, step=0.000001)
 
         rbc_volume = st.number_input("MCV (fL) [0-200]:",
                                    min_value=0.0, max_value=200.0,
-                                   value=92.64, step=0.1)
+                                   value=92.64, step=0.000001)
 
         rbc_width = st.number_input("RDW (%) [0-50]:",
                                   min_value=0.0, max_value=50.0,
-                                  value=13.46, step=0.1)
+                                  value=13.46, step=0.000001)
 
         alkaline = st.number_input("Alkaline phosphatase (U/L) [0-2000]:",
                                  min_value=0.0, max_value=2000.0,
-                                 value=106.4, step=1.0)
+                                 value=106.4, step=0.000001)
 
         wbc_count = st.number_input("WBC count (10⁹ cells/L) [0-400]:",
                                   min_value=0.0, max_value=400.0,
-                                  value=7.66, step=0.1)
+                                  value=7.66, step=0.000001)
 
         # 底部单位说明
         st.caption("MCV: Mean Corpuscular Volume | RDW: Red Cell Distribution Width | Alk Phos: Alkaline Phosphatase")
@@ -69,8 +69,8 @@ def main():
         phenotypic_age = calculate_phenotypic_age(biomarkers)
         age_acceleration = calculate_age_acceleration(age, phenotypic_age)
 
-        st.success(f"Your Phenotypic Age is: {phenotypic_age:.2f} years")
-        st.success(f"Your Age Acceleration is: {age_acceleration:.2f} years")
+        st.success(f"Your Phenotypic Age is: {phenotypic_age:.6f} years")
+        st.success(f"Your Age Acceleration is: {age_acceleration:.6f} years")
 
     # 添加引用（在按钮代码块之后）
     st.markdown("---")
