@@ -70,12 +70,10 @@ def main():
 
     st.markdown("""
     **Academic Attribution Notice**
-    *If this contributes to your research, please consider citing our seminal work on biological aging and venous thromboembolism risk assessment:*
+    *If this contributes to your research, please consider **citing** our seminal work on biological aging and venous thromboembolism risk assessment:*
     """)
 
     st.markdown("""
-    **Citation Reference:**
-
     Hu, Z., Xu, J., Shen, R., Lin, L., Su, Y., Xie, C., You, G., Zhou, Y. and Huang, K. (2025),
     Combination of Biological Aging and Genetic Susceptibility Helps Identifying At-Risk Population of Venous Thromboembolism:
     A Prospective Cohort Study of 394,041 Participants. *American Journal of Hematology*.
