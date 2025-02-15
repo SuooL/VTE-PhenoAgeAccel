@@ -5,7 +5,7 @@ from utils.calculations import calculate_phenotypic_age, calculate_age_accelerat
 def main():
     st.title("Phenotypic Age and Age Acceleration Calculator of VTE")
     st.header("Biomarker Input Parameters")
-    
+
     # 创建两列布局（比例可调）
     col1, col2 = st.columns([1, 1])  # 等宽两列
 
@@ -57,13 +57,21 @@ def main():
             "Age.at.recruitment": age
         }
 
-        if st.button("Calculate"):
+    # 完整位置应如下（在if st.button("Calculate")代码块之后）：
+    if st.button("Calculate"):
+        phenotypic_age = calculate_phenotypic_age(biomarkers)
+        age_acceleration = calculate_age_acceleration(phenotypic_age, age)
 
-            phenotypic_age = calculate_phenotypic_age(biomarkers)
-            age_acceleration = calculate_age_acceleration(phenotypic_age, age)
+        st.success(f"Your Phenotypic Age is: {phenotypic_age:.2f} years")
+        st.success(f"Your Age Acceleration is: {age_acceleration:.2f} years")
 
-            st.success(f"Your Phenotypic Age is: {phenotypic_age:.2f} years")
-            st.success(f"Your Age Acceleration is: {age_acceleration:.2f} years")
-
+    # 添加引用（在按钮代码块之后）
+    st.markdown("---")
+    st.markdown("""
+    **Scientific Reference:**
+    Hu, Z., Xu, J., Shen, R., et al. Combination of Biological Aging and Genetic Susceptibility Helps Identifying
+    At-Risk Population of Venous Thromboembolism: A Prospective Cohort Study of 394,041 Participants.
+    *Am J Hematol.* 2025. [doi:10.1002/ajh.27605](https://doi.org/10.1002/ajh.27605)
+    """)
 if __name__ == "__main__":
     main()
