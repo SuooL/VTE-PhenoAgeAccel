@@ -3,7 +3,7 @@ import streamlit as st
 from utils.calculations import calculate_phenotypic_age, calculate_age_acceleration
 
 def main():
-    st.title("Phenotypic Age and Age Acceleration Calculator of VTE")
+    st.title("Phenotypic Age Acceleration Calculator of VTE")
     st.header("Biomarker Input Parameters")
 
     # 创建两列布局（比例可调）
