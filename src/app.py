@@ -69,7 +69,7 @@ def main():
         phenotypic_age = calculate_phenotypic_age(biomarkers)
         age_acceleration = calculate_age_acceleration(age, phenotypic_age)
 
-        st.success(f"Your Phenotypic Age is: {phenotypic_age:.6f} years")
+        # st.success(f"Your Phenotypic Age is: {phenotypic_age:.6f} years")
         st.success(f"Your Age Acceleration is: {age_acceleration:.6f} years")
 
     # 添加引用（在按钮代码块之后）
